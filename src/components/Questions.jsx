@@ -9,7 +9,7 @@ export default function Questions() {
   useEffect(() => {
     const fetchQns = async () => {
       await axios
-        .get("https://quizzbe-production.up.railway.app")
+        .get("https://quizzbe-production.up.railway.app/questions")
         .then((res) => {
           setQns(res.data);
         })
