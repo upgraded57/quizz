@@ -9,6 +9,7 @@ export default function Questions() {
   useEffect(() => {
     const fetchQns = async () => {
       await axios
+        // .get("http://quizz-be.vercel.app/questions")
         .get("http://localhost:8800/questions")
         .then((res) => {
           setQns(res.data);

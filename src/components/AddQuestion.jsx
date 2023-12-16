@@ -36,6 +36,7 @@ export default function AddQuestion() {
     const newQn = { qn, options, ans, tags, difficulty_level };
 
     await axios
+      // .post("http://quizz-be.vercel.app/questions", newQn)
       .post("http://localhost:8800/questions", newQn)
       .then(() => {
         alert("New question created successfully");
