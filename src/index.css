@@ -71,16 +71,15 @@ body {
 }
 
 .options {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  width: 50%;
   justify-content: space-between;
 }
 
 .options label {
   cursor: pointer;
+  max-width: max-content;
 }
 
 .qn-tags {
@@ -239,4 +238,11 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .options {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
 }
